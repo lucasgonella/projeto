@@ -17,7 +17,7 @@ class Titular extends Pessoa implements Autenticavel
         $this->endereco = $endereco;
     }
 
-    public function validaNomeTitular(string $nomeTitular)
+    public function validaNome(string $nomeTitular)
     {
         if (strlen($nomeTitular) < 5) {
             echo "Nome precisa ter pelo menos 5 caracteres";
