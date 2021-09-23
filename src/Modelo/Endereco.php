@@ -9,8 +9,10 @@ namespace Alura\Banco\Modelo;
  * @property-read string $rua
  * @property-read string $numero
  */
-class Endereco
+final class Endereco
 {
+    use AcessoPropriedades;
+
     private string $cidade;
     private string $bairro;
     private string $rua;
@@ -46,17 +48,6 @@ class Endereco
     public function __toString(): string
     {
         return "{$this->rua}, {$this->numero}, {$this->bairro}, {$this->cidade}".PHP_EOL;
-    }
-
-    public function __get(string $nomeAtributo)
-    {
-       $metodo = 'recupera' . ucfirst($nomeAtributo);
-       echo $this->$metodo().PHP_EOL;
-    }
-
-    public function __set(string $nomeAtributo, string $valor): void
-    {
-        $this->$nomeAtributo = $valor;
     }
 
 }
