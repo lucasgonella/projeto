@@ -32,4 +32,6 @@ $umTitular = new Titular(
 //Teste
 
 
-$autenticador->tentaLogin($umTitular, 'abcd').PHP_EOL;
+$autenticador->tentaLogin($umTitular, 'abcd');
+$autenticador->tentaLogin($umGerente, '4321');
+$autenticador->tentaLogin($umDiretor, '1234');
